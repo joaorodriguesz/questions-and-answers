@@ -7,7 +7,6 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        // Iniciar o servidor em uma thread separada
         Thread serverThread = new Thread(() -> {
             try {
                 ForumServer.main(new String[0]);
@@ -19,7 +18,7 @@ public class Main {
         });
         serverThread.start();
 
-        Thread.sleep(300);
+        Thread.sleep(2000);
 
         ForumClient.main(new String[0]);
     }
